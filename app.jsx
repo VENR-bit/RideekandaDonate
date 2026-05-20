@@ -148,6 +148,7 @@ function Header() {
         <div className="brand-name">
           <b>Rideekanda Forest Monastery</b>
           <span>Udasgiriya · Matale · Sri Lanka</span>
+          <span className="phone-mobile">+94 74 225 2980</span>
         </div>
       </div>
       <div className="nav-right">
