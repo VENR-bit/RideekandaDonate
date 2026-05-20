@@ -86,7 +86,7 @@ a { color: inherit; }
 .hero h1 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(48px, 8vw, 116px);
+  font-size: clamp(36px, 6vw, 84px);
   line-height: 0.95;
   letter-spacing: -0.02em;
   margin: 0 0 36px;
@@ -757,7 +757,7 @@ a { color: inherit; }
   font-family: var(--serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(40px, 6vw, 84px);
+  font-size: clamp(28px, 4.5vw, 56px);
   line-height: 1.02;
   letter-spacing: -0.02em;
   margin: 0 0 36px;
