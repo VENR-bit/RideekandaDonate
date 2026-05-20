@@ -90,7 +90,7 @@ a { color: inherit; }
   line-height: 0.95;
   letter-spacing: -0.02em;
   margin: 0 auto 36px;
-  max-width: 14ch;
+  max-width: 30ch;
   text-wrap: balance;
 }
 .hero h1 em {
@@ -761,7 +761,7 @@ a { color: inherit; }
   line-height: 1.02;
   letter-spacing: -0.02em;
   margin: 0 auto 36px;
-  max-width: 18ch;
+  max-width: 60ch;
   color: var(--ink);
 }
 .closing h2 em { color: var(--accent); font-style: italic; }
