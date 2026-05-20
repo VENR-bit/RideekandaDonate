@@ -613,7 +613,7 @@ function Closing() {
       <div className="frame">
         <span className="mono" style={{color:"var(--muted)"}}>§ 02 — Anumodanā</span>
         <h2 style={{marginTop:20}}>
-          Thank you for your kindness, generosity and support.<br/><em>May this offering bring blessings, peace and well-being to all.</em>
+          Thank you for your kindness, generosity and support.<br/>May this offering bring blessings, peace and well-being to all.
         </h2>
 
         <div className="closing-foot">
