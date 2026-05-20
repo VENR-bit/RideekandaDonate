@@ -165,7 +165,7 @@ function Hero({ onJump }) {
     <section className="hero">
       <LotusOrnament />
       <div className="eyebrow mono"><span className="dot"></span><span>An offering of dāna</span></div>
-      <h1>Support the monastery <em>&amp; meditation</em> community.</h1>
+      <h1><em>Support</em> the monastery &amp; meditation community.</h1>
     </section>
   );
 }
