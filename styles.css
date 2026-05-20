@@ -544,6 +544,7 @@ a { color: inherit; }
   margin-top: 14px;
 }
 .wt-external-option .mono { color: var(--muted); font-size: 12px; }
+.wt-external-note { max-width: 40ch; line-height: 1.5; font-size: 11px !important; }
 .btn {
   font-family: var(--mono);
   font-size: 11px;

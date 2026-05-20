@@ -314,10 +314,11 @@ function WeTravelPanel({ amount, onOpenExternal }) {
           </div>
         </div>
         <div className="wt-external-option">
-          <span className="mono">Or pay on WeTravel's website instead</span>
+          <span className="mono">Pay on WeTravel's website instead</span>
           <a className="btn ghost" href={externalUrl} target="_blank" rel="noreferrer">
             Open payment page ↗
           </a>
+          <span className="mono wt-external-note">Use this link to pay via Google Pay or Apple Pay — these payment methods won't work in the embedded portal.</span>
         </div>
       </div>
       <div className="wt-mobile fade-in">
