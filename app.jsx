@@ -268,49 +268,62 @@ function WeTravelPanel({ amount, onOpenExternal }) {
   }
 
   return (
-    <div className="wt-stage fade-in" key={amount}>
-      <div className="wt-bar">
-        <div className="wt-dots"><span></span><span></span><span></span></div>
-        <div className="wt-url"><span className="wt-lock">●</span> &nbsp;wetravel.com / secure-checkout / ${amount}.00 USD</div>
-      </div>
-      <div className="wt-body">
-        {embedSrc && (
-          <iframe
-            ref={iframeRef}
-            src={embedSrc}
-            title={`WeTravel $${amount}`}
-            onLoad={handleLoaded}
-            referrerPolicy="no-referrer-when-downgrade"
-            allow="payment *"
-          />
-        )}
-        {!loaded && !failed && (
-          <div className="wt-fallback" style={{ background: "rgba(255,255,255,0.92)" }}>
-            <span className="mono">Connecting securely…</span>
-            <h4>Loading checkout for <em style={{color:"var(--accent)", fontStyle:"italic"}}>${amount}.00 USD</em></h4>
-          </div>
-        )}
-        {failed && (
-          <div className="wt-fallback">
-            <span className="mono">{embedSrc ? "Embed blocked on this domain" : "Embed link not yet configured"}</span>
-            <h4>Open the secure page in a new tab to complete the <em style={{color:"var(--accent)", fontStyle:"italic"}}>${amount} donation</em>.</h4>
-            <div style={{display:"flex", gap:12, flexWrap:"wrap", justifyContent:"center"}}>
-              <a className="btn accent" href={externalUrl} target="_blank" rel="noreferrer" onClick={onOpenExternal}>
-                Open secure checkout
-                <span>↗</span>
-              </a>
-              <a className="btn ghost" href={externalUrl} target="_blank" rel="noreferrer">
-                Open original link
-              </a>
+    <React.Fragment>
+      <div className="wt-stage wt-desktop fade-in" key={amount}>
+        <div className="wt-bar">
+          <div className="wt-dots"><span></span><span></span><span></span></div>
+          <div className="wt-url"><span className="wt-lock">●</span> &nbsp;wetravel.com / secure-checkout / ${amount}.00 USD</div>
+        </div>
+        <div className="wt-body">
+          {embedSrc && (
+            <iframe
+              ref={iframeRef}
+              src={embedSrc}
+              title={`WeTravel $${amount}`}
+              onLoad={handleLoaded}
+              referrerPolicy="no-referrer-when-downgrade"
+              allow="payment *"
+            />
+          )}
+          {!loaded && !failed && (
+            <div className="wt-fallback" style={{ background: "rgba(255,255,255,0.92)" }}>
+              <span className="mono">Connecting securely…</span>
+              <h4>Loading checkout for <em style={{color:"var(--accent)", fontStyle:"italic"}}>${amount}.00 USD</em></h4>
             </div>
-            <p style={{maxWidth:"44ch", color:"var(--muted)", fontSize:13, lineHeight:1.5, marginTop:6}}>
-              WeTravel's checkout embed only loads on whitelisted domains.
-              Once this site is deployed to its production URL, WeTravel will need to allow that domain in their dashboard for the in-page checkout to appear.
-            </p>
-          </div>
-        )}
+          )}
+          {failed && (
+            <div className="wt-fallback">
+              <span className="mono">{embedSrc ? "Embed blocked on this domain" : "Embed link not yet configured"}</span>
+              <h4>Open the secure page in a new tab to complete the <em style={{color:"var(--accent)", fontStyle:"italic"}}>${amount} donation</em>.</h4>
+              <div style={{display:"flex", gap:12, flexWrap:"wrap", justifyContent:"center"}}>
+                <a className="btn accent" href={externalUrl} target="_blank" rel="noreferrer" onClick={onOpenExternal}>
+                  Open secure checkout
+                  <span>↗</span>
+                </a>
+                <a className="btn ghost" href={externalUrl} target="_blank" rel="noreferrer">
+                  Open original link
+                </a>
+              </div>
+              <p style={{maxWidth:"44ch", color:"var(--muted)", fontSize:13, lineHeight:1.5, marginTop:6}}>
+                WeTravel's checkout embed only loads on whitelisted domains.
+                Once this site is deployed to its production URL, WeTravel will need to allow that domain in their dashboard for the in-page checkout to appear.
+              </p>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+      <div className="wt-mobile fade-in">
+        <a className="btn accent" href={externalUrl} target="_blank" rel="noreferrer">
+          Pay ${amount}.00 USD via WeTravel <span>↗</span>
+        </a>
+        <a className="btn ghost" href={externalUrl} target="_blank" rel="noreferrer" style={{marginTop:10}}>
+          Open payment link directly
+        </a>
+        <p className="mono" style={{color:"var(--muted)", fontSize:11, marginTop:14, textAlign:"center"}}>
+          You'll be redirected to WeTravel's secure checkout page.
+        </p>
+      </div>
+    </React.Fragment>
   );
 }
 

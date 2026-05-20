@@ -593,9 +593,11 @@ a { color: inherit; }
 .bank-tab-row { display: flex; align-items: center; gap: 12px; }
 .bank-tab-flag { font-size: 22px; line-height: 1; }
 .bank-tab-label { font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.15; letter-spacing: -0.005em; }
+.wt-mobile { display: none; flex-direction: column; align-items: center; padding: 36px 20px; }
+.wt-mobile .btn { width: 100%; text-align: center; justify-content: center; }
 @media (max-width: 720px) {
-  .wt-stage { border: none; margin: 0 -10px; width: calc(100% + 20px); }
-  .wt-bar { display: none; }
+  .wt-desktop { display: none !important; }
+  .wt-mobile { display: flex; }
   .bank-tabs { grid-template-columns: 1fr; gap: 10px; }
   .bank-tab.active::after { display: none; }
 }
