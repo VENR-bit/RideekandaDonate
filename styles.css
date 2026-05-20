@@ -486,7 +486,7 @@ a { color: inherit; }
   background: var(--bg);
   position: relative;
   overflow: hidden;
-  min-height: 480px;
+  min-height: 820px;
   display: flex; flex-direction: column;
 }
 .wt-bar {
