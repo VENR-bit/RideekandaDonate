@@ -322,6 +322,9 @@ a { color: inherit; }
   .display-frame { padding: 22px; min-height: 0; }
   .display-frame.qr-frame { grid-template-columns: 1fr; gap: 26px; }
 }
+@media (max-width: 720px) {
+  .display-frame { padding: 6px; border: none; }
+}
 
 /* empty-hint */
 .empty-hint {
@@ -591,6 +594,8 @@ a { color: inherit; }
 .bank-tab-flag { font-size: 22px; line-height: 1; }
 .bank-tab-label { font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.15; letter-spacing: -0.005em; }
 @media (max-width: 720px) {
+  .wt-stage { border: none; margin: 0 -22px; width: calc(100% + 44px); }
+  .wt-bar { display: none; }
   .bank-tabs { grid-template-columns: 1fr; gap: 10px; }
   .bank-tab.active::after { display: none; }
 }
