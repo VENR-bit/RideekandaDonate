@@ -611,7 +611,7 @@ function Closing() {
   return (
     <section className="sec closing">
       <div className="frame">
-        <span className="mono" style={{color:"var(--muted)"}}>§ 02 — Anumodanā</span>
+        <span className="mono" style={{color:"var(--muted)"}}>Anumodanā</span>
         <h2 style={{marginTop:20}}>
           Thank you for your kindness, generosity and support.<br/>May this offering bring blessings, peace and well-being to all.
         </h2>
