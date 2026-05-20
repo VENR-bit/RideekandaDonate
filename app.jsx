@@ -174,9 +174,6 @@ function Hero({ onJump }) {
 function MethodCard({ n, title, sub, kind, active, onClick }) {
   return (
     <button className={"method" + (active ? " active" : "")} onClick={onClick}>
-      <div className="method-top">
-        <div className="method-num">— {n}</div>
-      </div>
       <h3 className="method-title">{title}</h3>
       <div className="method-rule"></div>
       <div className="method-sub">{sub}</div>
