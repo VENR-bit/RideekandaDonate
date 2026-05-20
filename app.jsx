@@ -617,13 +617,6 @@ function Closing() {
         </h2>
 
         <div className="closing-foot">
-          <div className="brand">
-            <div className="brand-mark"><LotusMark size={22} color="var(--accent)"/></div>
-            <div className="brand-name">
-              <b>Rideekanda Forest Monastery</b>
-              <span>Udasgiriya · Matale · Sri Lanka · 21051</span>
-            </div>
-          </div>
           <span className="mono">Payment gateway powered by WeTravel</span>
         </div>
       </div>
