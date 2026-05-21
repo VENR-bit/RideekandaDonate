@@ -120,7 +120,7 @@ a { color: inherit; }
 .hero-meta .val { font-size: 16px; }
 @media (max-width: 720px) {
   .hero { padding: 28px 0 12px; }
-  .hero h1 { max-width: 10ch; margin-bottom: 16px; }
+  .hero h1 { max-width: 100%; margin-bottom: 16px; font-size: clamp(28px, 7vw, 40px); }
   .hero-meta { grid-template-columns: 1fr; gap: 16px; padding: 18px 0; }
   .hero-meta > div { padding: 0; }
 }
