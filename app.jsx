@@ -521,15 +521,13 @@ function Give() {
         <span className="mono step-mark">Step 1 — Choose a method</span>
         <div className="methods">
           <MethodCard
-            n="01"
-            title="Scan a QR Code"
-            sub="Select the QR code. Scan with your camera or bank app to complete the gift in seconds."
-            kind="qr"
-            active={method === "qr"}
-            onClick={() => choose("qr")}
+            title="Bank Transfer"
+            sub="For SWIFT, ACH or local bank transfer. Three accounts: US (UNFCU) and two in Sri Lanka."
+            kind="bank"
+            active={method === "bank"}
+            onClick={() => choose("bank")}
           />
           <MethodCard
-            n="02"
             title="Donate Online"
             sub={<>Card Pay · Apple Pay · Google Pay — handled in-page through the WeTravel gateway.</>}
             kind="card"
@@ -537,12 +535,11 @@ function Give() {
             onClick={() => choose("wetravel")}
           />
           <MethodCard
-            n="03"
-            title="Bank Transfer"
-            sub="For SWIFT, ACH or local bank transfer. Three accounts: US (UNFCU) and two in Sri Lanka."
-            kind="bank"
-            active={method === "bank"}
-            onClick={() => choose("bank")}
+            title="Scan a QR Code"
+            sub="Select the QR code. Scan with your camera or bank app to complete the gift in seconds."
+            kind="qr"
+            active={method === "qr"}
+            onClick={() => choose("qr")}
           />
         </div>
 
@@ -552,7 +549,7 @@ function Give() {
             <div className="stage-step-head">
               <span className="mono step-mark">Step 2 — Pick an amount</span>
               <div className="stage-step-meta">
-                <span className="mono">Method · {method === "qr" ? "01 Scan a QR" : "02 Donate online"}</span>
+                <span className="mono">Method · {method === "qr" ? "Scan a QR" : "Donate online"}</span>
                 <button className="link-btn" onClick={() => { setMethod(null); setAmount(null); }}>Change method</button>
               </div>
             </div>
