@@ -122,20 +122,12 @@ function MethodIcon({ kind }) {
 
 function LotusOrnament() {
   return (
-    <svg className="lotus-bg" viewBox="0 0 200 200" fill="none">
-      <g stroke="#14110b" strokeWidth="0.6" fill="none">
-        {[...Array(12)].map((_, i) => {
-          const a = (i / 12) * Math.PI * 2;
-          const x1 = 100 + Math.cos(a) * 30;
-          const y1 = 100 + Math.sin(a) * 30;
-          const x2 = 100 + Math.cos(a) * 90;
-          const y2 = 100 + Math.sin(a) * 90;
-          return <path key={i} d={`M${x1} ${y1} Q${100 + Math.cos(a) * 60} ${100 + Math.sin(a) * 60 - 6}, ${x2} ${y2}`} />;
-        })}
-        <circle cx="100" cy="100" r="30"/>
-        <circle cx="100" cy="100" r="6" fill="#14110b"/>
-      </g>
-    </svg>
+    <img
+      className="lotus-bg"
+      src="assets/logo-mark.png"
+      alt=""
+      aria-hidden="true"
+    />
   );
 }
 
@@ -152,6 +144,7 @@ function Header() {
         </div>
       </div>
       <div className="nav-right">
+        <a href="https://rideekanda.org" className="mono home-link">← Home</a>
         <span className="mono hide-sm">rideekanda@gmail.com</span>
         <span className="mono">+94 74 225 2980</span>
       </div>
