@@ -79,7 +79,8 @@ a.home-link, a.home-link:visited, a.home-link:hover, a.home-link:active { text-d
 a.home-link:hover { color: var(--accent); }
 .brand-name .phone-mobile { display: none; }
 @media (max-width: 720px) {
-  .nav-right { display: none; }
+  .nav-right { display: flex; }
+  .nav-right .mono:not(.home-link) { display: none; }
   .brand-name .phone-mobile { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
 }
 
