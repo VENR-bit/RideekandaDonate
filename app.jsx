@@ -515,7 +515,7 @@ function Give() {
         <div className="methods">
           <MethodCard
             title="Bank Transfer"
-            sub="For SWIFT, ACH or local bank transfer. Three accounts: US (UNFCU) and two in Sri Lanka."
+            sub="For SWIFT, ACH or local bank transfer. NSB Bank, Sri Lanka."
             kind="bank"
             active={method === "bank"}
             onClick={() => choose("bank")}
@@ -592,7 +592,7 @@ function Give() {
             <div className="stage-step-head">
               <span className="mono step-mark">Step 2 — Bank account details</span>
               <div className="stage-step-meta">
-                <span className="mono">Method · 03 Bank transfer</span>
+                <span className="mono">Method · Bank transfer</span>
                 <button className="link-btn" onClick={() => setMethod(null)}>Change method</button>
               </div>
             </div>
